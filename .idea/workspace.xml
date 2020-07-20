@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d834bd1-7ffd-407c-a7d4-a2b948c5c66c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3d834bd1-7ffd-407c-a7d4-a2b948c5c66c" name="Default Changelist" comment="修改首页">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
@@ -77,8 +76,16 @@
       <option name="presentableId" value="Default" />
       <updated>1595157191075</updated>
       <workItem from="1595157194622" duration="3374000" />
-      <workItem from="1595237423478" duration="6858000" />
+      <workItem from="1595237423478" duration="8297000" />
     </task>
+    <task id="LOCAL-00001" summary="修改首页">
+      <created>1595246446389</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595246446390</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +102,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改首页" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改首页" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595246471018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.0.1600.860@0.0.1920.1040" timestamp="1595246471018" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1595237449169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

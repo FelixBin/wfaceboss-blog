@@ -141,13 +141,16 @@ body {
     color: #333333 !important;
 }
 
-
+.w-mobile-show {
+    display: none !important;
+}
 
 @media screen and (max-width: 768px){
+
     .w-mobile-hide {
         display: none !important;
     }
-    .mw-mobile-show {
+    .w-mobile-show {
         display: block !important;
     }
     .w-padded-lr-responsive {

@@ -128,6 +128,20 @@ body {
 }
 
 
+/*------container------*/
+
+.w-container{
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+/*---------color----------*/
+
+.w-black{
+    color: #333333 !important;
+}
+
+
 
 @media screen and (max-width: 768px){
     .w-mobile-hide {

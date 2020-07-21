@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d834bd1-7ffd-407c-a7d4-a2b948c5c66c" name="Default Changelist" comment="修改首页">
+    <list default="true" id="3d834bd1-7ffd-407c-a7d4-a2b948c5c66c" name="Default Changelist" comment="首页完成">
+      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/wechart.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/wechart.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +57,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\项目\wfaceboss\wfaceboss-blog" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/blog-code/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -76,7 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1595157191075</updated>
       <workItem from="1595157194622" duration="3374000" />
-      <workItem from="1595237423478" duration="8297000" />
+      <workItem from="1595237423478" duration="8801000" />
+      <workItem from="1595331777732" duration="4916000" />
     </task>
     <task id="LOCAL-00001" summary="修改首页">
       <created>1595246446389</created>
@@ -85,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595246446390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="首页完成">
+      <created>1595247856480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595247856480</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,16 +116,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改首页" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改首页" />
+    <MESSAGE value="首页完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页完成" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595246471018">
+    <state x="754" y="306" key="#Web_Browsers" timestamp="1595332581176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.0.1600.860@0.0.1920.1040" timestamp="1595246471018" />
+    <state x="754" y="306" key="#Web_Browsers/0.0.1920.1040/-1600.0.1600.860@0.0.1920.1040" timestamp="1595332581176" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595247879861">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.0.1600.860@0.0.1920.1040" timestamp="1595247879861" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1595237449169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

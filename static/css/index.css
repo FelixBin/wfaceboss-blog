@@ -61,6 +61,8 @@ body {
     padding-right: 4em !important;
 }
 
+
+
 /*-------text -----*/
 
 .w-text {
@@ -132,6 +134,11 @@ body {
 
 .w-container{
     max-width: 72em !important;
+    margin: auto !important;
+}
+
+.w-container-sm{
+    max-width: 60em !important;
     margin: auto !important;
 }
 

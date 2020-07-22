@@ -62,7 +62,6 @@ body {
 }
 
 
-
 /*-------text -----*/
 
 .w-text {
@@ -132,19 +131,19 @@ body {
 
 /*------container------*/
 
-.w-container{
+.w-container {
     max-width: 72em !important;
     margin: auto !important;
 }
 
-.w-container-sm{
+.w-container-sm {
     max-width: 60em !important;
     margin: auto !important;
 }
 
 /*---------color----------*/
 
-.w-black{
+.w-black {
     color: #333333 !important;
 }
 
@@ -152,22 +151,38 @@ body {
     display: none !important;
 }
 
-@media screen and (max-width: 768px){
+
+/*---------shadow-------------*/
+.w-shadow-small {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media screen and (max-width: 768px) {
 
     .w-mobile-hide {
         display: none !important;
     }
+
     .w-mobile-show {
         display: block !important;
     }
+
     .w-padded-lr-responsive {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
     .w-mobile-lr-clear {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
+    .w-mobile-lr-clear {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     .w-mobile-wide {
         width: 100% !important;
     }

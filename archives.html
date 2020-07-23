@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>归档</title>
+    <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
+    <link href="./static/css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<!--导航-->
+<nav class="ui inverted attached segment w-padded-tb-mini w-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a class="item w-item w-mobile-hide" href="#"><i class="home icon"></i>首页</a>
+            <a class="item w-item w-mobile-hide" href="#"><i class="idea icon"></i>分类</a>
+            <a class="item w-item w-mobile-hide" href="#"><i class="tags icon"></i>标签</a>
+            <a class="active item w-item w-mobile-hide" href="#"><i class="clone icon"></i>归档</a>
+            <a class="item w-item w-mobile-hide" href="#"><i class="info icon"></i>关于我</a>
+            <div class="right  item w-mobile-hide">
+                <div class="ui icon   input w-margin-tb-tiny">
+                    <input placeholder="Search...." type="text">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="ui menu toggle black icon button w-right-top w-mobile-show" href="#">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--中间内容-->
+<div class="w-container-small w-padded-tb-big" style="height: 800px!important;">
+    <div class="ui container">
+        <!--header-->
+        <div class="ui top attached padded segment">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <h3 class="ui teal header">归档</h3>
+                </div>
+                <div class="right aligned column">
+                    共 <h2 class="ui orange header w-inline-block w-text-thin"> 114 </h2> 篇博客
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h2 class="ui center aligned header">2017</h2>
+        <div class="ui fluid vertical menu">
+            <a href="#" target="_blank" class="item">
+          <span>
+            <i class="mini orange circle icon"></i><span>关于刻意练习的清单</span>
+            <button class="ui orange basic left pointing label w-padded-mini">9月03</button>
+          </span>
+                <div class="ui orange basic left pointing label w-padded-mini ">原创</div>
+            </a>
+            <!--/*-->
+            <a href="#" target="_blank" class="item">
+          <span>
+            <i class="mini teal circle icon"></i>关于刻意练习的清单
+            <button class="ui teal basic left pointing label w-padded-mini ">9月03</button>
+          </span>
+                <div class="ui orange basic left pointing label w-padded-mini ">原创</div>
+            </a>
+            <a href="#" target="_blank" class="item">
+          <span>
+            <i class="mini teal circle icon"></i>关于刻意练习的清单
+            <button class="ui teal basic left pointing label w-padded-mini ">9月03</button>
+          </span>
+                <div class="ui orange basic left pointing label w-padded-mini ">原创</div>
+            </a>
+            <a href="#" target="_blank" class="item">
+          <span>
+            <i class="mini teal circle icon"></i>关于刻意练习的清单
+            <button class="ui teal basic left pointing label w-padded-mini ">9月03</button>
+          </span>
+                <div class="ui orange basic left pointing label w-padded-mini">原创</div>
+            </a>
+            <!--*/-->
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!--底部footer-->
+<footer class="ui inverted vertical segment w-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img alt="" class="ui rounded image" src="./static/images/wechart.jpg" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a class="item w-text-thin" href="#">Email：wfaceboss@163.com</a>
+                    <a class="item w-text-thin" href="#">QQ：776138757</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">Blog</h4>
+                <p class="w-text-thin w-text-spaced w-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="w-text-thin w-text-spaced w-opacity-tiny">Copyright © 2020 - 2021 </p>
+    </div>
+
+</footer>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    // 手机端
+    $('.menu.toggle').click(function () {
+        $('.w-item').toggleClass('w-mobile-hide');
+    });
+
+
+</script>
+</body>
+</html>

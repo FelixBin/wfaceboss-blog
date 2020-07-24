@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>博客管理</title>
+    <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<!--导航-->
+<nav class="ui inverted attached segment w-padded-tb-mini w-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">管理后台</h2>
+            <a class="active item w-item w-mobile-hide" href="#"><i class="home icon"></i>博客</a>
+            <a class="item w-item w-mobile-hide" href="#"><i class="idea icon"></i>分类</a>
+            <a class="item w-item w-mobile-hide" href="#"><i class="tags icon"></i>标签</a>
+            <div class="right m-item w-mobile-hide menu">
+                <div class="ui dropdown  item">
+                    <div class="text">
+                        <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005">
+                        <span>wfaceboss</span>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="ui menu toggle black icon button w-right-top w-mobile-show" href="#">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--中间内容-->
+<div class="w-container-sm w-padded-tb-big">
+    <div class="ui container">
+        <div class="ui secondary segment form">
+            <!--查询表单需要是form提交数据-->
+            <form method="post" class="ui segment form">
+                <!--fields代表一个区域,inline缩短区域的效果-->
+                <div class="inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="标题">
+                    </div>
+                    <div class="field">
+                        <!--dropdown是下拉框效果-->
+                        <div class="ui labeled action input">
+                            <div class="ui type selection dropdown">
+                                <input type="hidden" name="typeId">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">分类</div>
+                                <!--menu是菜单-->
+                                <div class="menu">
+                                    <div class="item" data-value="1">错误日志</div>
+                                </div>
+                            </div>
+                            <button id="clear-btn" class="ui compact button">clear</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">推荐</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button type="button" id="search-btn" class="ui mini teal basic button"><i
+                                class="search icon"></i>搜索
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
+            <div id="table-container">
+                <table class="ui compact teal table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>推荐</th>
+                        <th>状态</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="blog, iterStat : ${pageInfo.list}">
+                        <td>1</td>
+                        <td>刻意练习清单</td>
+                        <td>认知升级</td>
+                        <td>是</td>
+                        <td>发布</td>
+                        <td>2020-3-02</td>
+                        <td>
+                            <a href="#"
+                               class="ui mini teal basic button">编辑</a>
+                            <a href="#"
+                               class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="7">
+                            <div class="ui mini pagination menu">
+                                <div class="item"><a>首页</a></div>
+                                <div class="item"><a
+                                >上一页</a>
+                                </div>
+                                <div class="item"><a>下一页</a>
+                                </div>
+                                <div class="item"><a>尾页</a>
+                                </div>
+                            </div>
+                            <a href="#"
+                               class="ui mini right floated teal basic button">新增</a>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="ui segment m-inline-block">
+                    <p>当前第<span></span>页，总<span></span>页，共<span></span>条记录</p>
+                </div>
+                <div class="ui success message">
+                    <i class="close icon"></i>
+                    <div class="header">提示：</div>
+                    <p>恭喜，操作成功！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!--底部footer-->
+<footer class="ui inverted vertical segment w-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img alt="" class="ui rounded image"
+                             src="../static/images/wechart.jpg" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                    <a class="item w-text-thin" href="#">用户故事（User Story）</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a class="item w-text-thin" href="#">Email：wfaceboss@163.com</a>
+                    <a class="item w-text-thin" href="#">QQ：776138757</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header w-text-thin w-text-spaced ">Blog</h4>
+                <p class="w-text-thin w-text-spaced w-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="w-text-thin w-text-spaced w-opacity-tiny">Copyright © 2020 - 2021 </p>
+    </div>
+
+</footer>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    // 手机端
+    $('.menu.toggle').click(function () {
+        $('.w-item').toggleClass('w-mobile-hide');
+    });
+
+    //头像下拉
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+
+
+</script>
+</body>
+</html>

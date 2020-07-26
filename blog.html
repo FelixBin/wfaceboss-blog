@@ -5,6 +5,15 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>博客详情</title>
     <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
+    <!--  文档排版  -->
+    <link rel="stylesheet" href="./static/css/typo.css">
+    <!-- 动画特效-->
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <!-- 代码高亮样式-->
+    <link rel="stylesheet" href="./static/lib/prism/prism.css">
+    <!--目录样式-->
+    <link rel="stylesheet" href="./static/lib/tocbot/tocbot.css">
+    <!--自定义样式-->
     <link href="./static/css/index.css" rel="stylesheet">
 </head>
 <body>
@@ -33,7 +42,7 @@
 </nav>
 
 <!--中间内容-->
-<div class="w-container-sm w-padded-tb-big">
+<div class="w-container-sm w-padded-tb-big    animate__animated animate__fadeIn">
     <div class="ui container">
         <div class="ui top attached segment">
             <div class="ui  horizontal link list">
@@ -62,13 +71,272 @@
             <h2 class="ui center aligned header"> SpringBoot 究竟是如何跑起来的? </h2>
             <br/>
             <div class="w-padded-lr-responsive w-padded-tb-large" id="content">
-                不得不说 SpringBoot 太复杂了，我本来只想研究一下 SpringBoot 最简单的 HelloWorld 程序是如何从 main 方法一步一步跑起来的，
-                但是这却是一个相当深的坑。你可以试着沿着调用栈代码一层一层的深入进去，如果你不打断点，你根本不知道接下来程序会往哪里流动。
-                这个不同于我研究过去的 Go 语言、Python 语言框架，它们通常都非常直接了当，设计上清晰易懂，代码写起来简单，里面的实现同样也很简单。
-                但是 SpringBoot 不是，它的外表轻巧简单，但是它的里面就像一只巨大的怪兽，这只怪兽有千百只脚把自己缠绕在一起，
-                把爱研究源码的读者绕的晕头转向。但是这 Java 编程的世界 SpringBoot 就是老大哥，你却不得不服。即使你的心中有千万头草泥马在奔跑，
-                但是它就是天下第一。如果你是一个学院派的程序员，看到这种现象你会怀疑人生，你不得不接受一个规则 —— 受市场最欢迎的未必就是设计的最好的，
-                里面夹杂着太多其它的非理性因素。
+
+                <div id="wrapper" class="typo typo-selection js-toc-content">
+
+                    <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
+                    <ol id="table" class="ui table">
+                        <li><a href="#section1">关于 <i class="serif">Typo.css</i></a></li>
+                        <li><a href="#section2">排版实例</a>
+                            <ul>
+                                <li><a href="#section2-1">例1：论语学而篇第一</a></li>
+                                <li><a href="#section2-2">例2：英文排版</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3">附录</a>
+                            <ul>
+                                <li><a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a></li>
+                                <li><a href="#appendix2">开源许可</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
+                    <p><i class="serif">Typo.css</i> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
+                    <h4>现状和如何去做：</h4>
+                    <table summary="Typo.css 的测试平台列表" class="ui table">
+                        <thead>
+                        <tr>
+                            <th>OS/浏览器</th>
+                            <th>Firefox</th>
+                            <th>Chrome</th>
+                            <th>Safari</th>
+                            <th>Opera</th>
+                            <th>IE9</th>
+                            <th>IE8</th>
+                            <th>IE7</th>
+                            <th>IE6</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>OS X</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Win 7</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Win XP</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>Ubuntu</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="section2">二、排版实例：</h2>
+                    <p>提供2个排版实例，第一个中文实例来自于来自于<cite class="typo-unique">张燕婴</cite>的《论语》，由于古文排版涉及到的元素比较多，所以采用《论语》中《学而》的第一篇作为排版实例介绍；第2个来自到经典的
+                        Lorem Ipsum，并加入了一些代码和列表等比较具有代表性的排版元素。</p>
+                    <h3 id="section2-1">例1：论语学而篇第一</h3>
+                    <h3 id="section2-2">例2：英文排版</h3>
+
+                    <hr/>
+                    <pre><code class="language-css">
+h1,h2,h3,h4,h5,h6 {
+    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
+}
+h1{font-size:1.8em;}
+h2{font-size:1.6em;}
+h3{font-size:1.4em;}
+h4{font-size:1.2em;}
+h5,h6{font-size:1em;}
+
+/* 现代排版：保证块/段落之间的空白隔行 */
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
+    margin:1em 0 0.6em;
+}
+</code></pre>
+
+                    <h3 id="section3">三、附录</h3>
+
+                    <h5 id="appendix1">1、<i class="serif">Typo.css</i> 排版偏重点</h5>
+                    <table summary="Typo.css 排版偏重点">
+                        <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>语义</th>
+                            <th>标签</th>
+                            <th>注意点</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th rowspan="15">基础标签</th>
+                            <td>标题</td>
+                            <td><code>h1</code> ～ <code>h6</code></td>
+                            <td>全局不强制大小，<code>.typo</code> 中标题与其对应的内容应紧贴，并且有相应的大小设置</td>
+                        </tr>
+                        <tr>
+                            <td>上、下标</td>
+                            <td><code>sup</code>/<code>sub</code></td>
+                            <td>保持与 MicroSoft Office Word 等程序的日常排版一致</td>
+                        </tr>
+                        <tr>
+                            <td>引用</td>
+                            <td><code>blockquote</code></td>
+                            <td>显示/嵌套样式</td>
+                        </tr>
+                        <tr>
+                            <td>缩写</td>
+                            <td><code>abbr</code></td>
+                            <td>是否都有下划线，鼠标 <code>hover</code> 是否为帮助手势</td>
+                        </tr>
+                        <tr>
+                            <td>分割线</td>
+                            <td><code>hr</code></td>
+                            <td>显示的 <code>padding</code> 和 <code>margin</code>正确</td>
+                        </tr>
+                        <tr>
+                            <td>列表</td>
+                            <td><code>ul</code>/<code>ol</code>/<code>dl</code></td>
+                            <td>在全局没有 <code>list-style</code>，在 .<code>typo</code> 中对齐正确</td>
+                        </tr>
+                        <tr>
+                            <td>定义列表</td>
+                            <td><code>dl</code></td>
+                            <td>全局 <code>padding</code> 和 <code>margin</code>为0， .<code>typo</code> 中对齐正确</td>
+                        </tr>
+                        <tr>
+                            <td>选项</td>
+                            <td><code>input[type=radio[, checkbox]]</code></td>
+                            <td>与其他 <code>form</code> 元素排版时是否居中</td>
+                        </tr>
+                        <tr>
+                            <td>斜体</td>
+                            <td><code>i</code></td>
+                            <td>只设置一种斜体，让 <code>em</code> 和 <code>cite</code> 显示为正体</td>
+                        </tr>
+                        <tr>
+                            <td>强调</td>
+                            <td><code>em</code></td>
+                            <td>在全局显示正体，在 <code>.typo</code> 中显示与 <code>b</code> 和 <code>strong</code> 的样式一致，为粗体</td>
+                        </tr>
+                        <tr>
+                            <td>加强</td>
+                            <td><code>strong/b</code></td>
+                            <td>显示为粗体</td>
+                        </tr>
+                        <tr>
+                            <td>标记</td>
+                            <td><code>mark</code></td>
+                            <td>类似荧光笔</td>
+                        </tr>
+                        <tr>
+                            <td>印刷</td>
+                            <td><code>small</code></td>
+                            <td>保持为正确字体的 80% 大小，颜色设置为浅灰色</td>
+                        </tr>
+                        <tr>
+                            <td>表格</td>
+                            <td><code>table</code></td>
+                            <td>全局不显示线条，在 <code>table</code> 中显示表格外框，并且表头有浅灰背景</td>
+                        </tr>
+                        <tr>
+                            <td>代码</td>
+                            <td><code>pre</code>/<code>code</code></td>
+                            <td>字体使用 <code>courier</code> 系字体，保持与 <code>serif</code> 有比较一致的显示效果</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">特殊符号</th>
+                            <td>着重号</td>
+                            <td><em class="typo-em">在文字下加点</em></td>
+                            <td>在支持 <code>:after</code> 和 <code>:before</code> 的浏览器可以做渐进增强实现</td>
+                        </tr>
+                        <tr>
+                            <td>专名号</td>
+                            <td><u>林建锋</u></td>
+                            <td>专名号，有下划线，使用 <code>u</code> 或都 <code>.typo-u</code> 类</td>
+                        </tr>
+                        <tr>
+                            <td>破折号</td>
+                            <td>——</td>
+                            <td>保持一划，而非两划</td>
+                        </tr>
+                        <tr>
+                            <td>人民币</td>
+                            <td>&yen;</td>
+                            <td>使用两平等线的符号，或者 HTML 实体符号 <code>&amp;yen;</code></td>
+                        </tr>
+                        <tr>
+                            <td>删除符</td>
+                            <td>
+                                <del>已删除（deleted）</del>
+                            </td>
+                            <td>一致化各浏览器显示，中英混排正确</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">加强类</th>
+                            <td>专名号</td>
+                            <td><code>.typo-u</code></td>
+                            <td>由于 <code>u</code> 被 HTML4 放弃，在向后兼容上推荐使用 <code>.typo-u</code></td>
+                        </tr>
+                        <tr>
+                            <td>着重符</td>
+                            <td><code>.typo-em</code></td>
+                            <td>利用 <code>:after</code> 和 <code>:before</code> 实现着重符</td>
+                        </tr>
+                        <tr>
+                            <td>清除浮动</td>
+                            <td><code>.clearfix</code></td>
+                            <td>与一般 CSS Reset 保持一对致 API</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">注意点</th>
+                            <td colspan="3">（1）中英文混排行高/行距</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">（2）上下标在 IE 中显示效果</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">（3）块/段落分割空白是否符合设计原则</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">（4）input 多余空间问题</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">（5）默认字体色彩，目前采用 <code>#333</code> 在各种浏览显示比较好</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 id="appendix2">2、开源许可</h5>
+
+                    <p><i class="serif">Typo.css</i> 基于 <a href="//zh.wikipedia.org/wiki/MIT_License">MIT License</a>
+                        开源，使用代码只需说明来源，或者引用 <a
+                                href="//typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
+                </div>
             </div>
 
             <!--标签-->
@@ -115,8 +383,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="ui bottom attached segment">
+        <div id="comment-container" class="ui bottom attached segment">
             <!--留言区域列表-->
             <div class="ui teal segment">
                 <div class="ui threaded comments">
@@ -194,7 +461,6 @@
                 </div>
             </div>
 
-
             <!--留言-->
             <div class="ui form">
                 <form class="ui reply form">
@@ -222,16 +488,29 @@
                             </button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
 </div>
-<br>
-<br>
 
 
+<!--右侧-->
+<div class="w-padded w-fixed w-right-bottom">
+    <div class="ui vertical icon buttons">
+        <button class="ui teal toc-button button">目录</button>
+        <a href="#comment-container" class="ui teal button">留言</a>
+        <button class="ui icon  button"><i class="weixin icon"></i></button>
+        <a href="#" class="ui teal button"><i class="chevron up icon"></i></a>
+    </div>
+</div>
+
+<!--目录-->
+<div class="ui toc-container flowing popup  transition hidden" style="width: 250px!important;">
+    <ol class="js-toc"></ol>
+</div>
+<br>
+<br>
 <!--底部footer-->
 <footer class="ui inverted vertical segment w-padded-tb-massive">
     <div class="ui center aligned container">
@@ -274,6 +553,11 @@
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
 
+<!--代码高亮-->
+<script src="static/lib/prism/prism.js"></script>
+
+<!--目录生成-->
+<script src="static/lib/tocbot/tocbot.min.js"></script>
 <script>
     // 手机端
     $('.menu.toggle').click(function () {
@@ -285,8 +569,23 @@
         popup: $(".payQrCode.popup"),
         on: 'click',
         position: 'bottom center'
+    });
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',//生成位置
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',//标题源
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',//可以生成三级标题
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+    //目录
+    $(".toc-button").popup({
+        popup: $(".toc-container.popup"),
+        on: 'click',
+        position: 'left center'
     })
-
 </script>
 </body>
 </html>

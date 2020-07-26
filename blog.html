@@ -42,7 +42,7 @@
 </nav>
 
 <!--中间内容-->
-<div class="w-container-sm w-padded-tb-big    animate__animated animate__fadeIn">
+<div id="waypoint" class="w-container-sm w-padded-tb-big    animate__animated animate__fadeIn">
     <div class="ui container">
         <div class="ui top attached segment">
             <div class="ui  horizontal link list">
@@ -494,20 +494,25 @@ h5,h6{font-size:1em;}
     </div>
 </div>
 
-
 <!--右侧-->
-<div class="w-padded w-fixed w-right-bottom">
+<div id="toolbar" class="w-padded w-fixed w-right-bottom" style="display: none;">
     <div class="ui vertical icon buttons">
         <button class="ui teal toc-button button">目录</button>
-        <a href="#comment-container" class="ui teal button">留言</a>
-        <button class="ui icon  button"><i class="weixin icon"></i></button>
-        <a href="#" class="ui teal button"><i class="chevron up icon"></i></a>
+        <a href="#comment-container" class="ui basic button">留言</a>
+        <button class="ui wechat  icon  button"><i class="weixin icon"></i></button>
+        <button id="toTop-button" class="ui teal button"><i class="chevron up icon"></i></button>
     </div>
 </div>
 
 <!--目录-->
 <div class="ui toc-container flowing popup  transition hidden" style="width: 250px!important;">
     <ol class="js-toc"></ol>
+</div>
+
+<!--微信二维码-->
+
+<div id="qrcode" class="ui wechat-qr flowing popup transition hidden" style="width: 130px !important;">
+    <!--    <img src="./static/images/wechart.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
 </div>
 <br>
 <br>
@@ -558,6 +563,15 @@ h5,h6{font-size:1em;}
 
 <!--目录生成-->
 <script src="static/lib/tocbot/tocbot.min.js"></script>
+
+<!--生成二维码-->
+<script src="static/lib/qrcode/qrcode.js"></script>
+<!--平滑滚动-->
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script src="static/lib/scrollTo/jquery.scrollTo.js"></script>
+
+<!--滚动监听-->
+<script src="static/lib/waypoints/jquery.waypoints.js"></script>
 <script>
     // 手机端
     $('.menu.toggle').click(function () {
@@ -585,6 +599,40 @@ h5,h6{font-size:1em;}
         popup: $(".toc-container.popup"),
         on: 'click',
         position: 'left center'
+    });
+
+    //    二维码
+    $('.wechat').popup({
+        popup: $('.wechat-qr'),
+        position: 'left center'
+    });
+
+    //    生成二维码
+    let qrcode = new QRCode("qrcode", {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 110,
+        height: 110,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    //    回到顶部
+    $("#toTop-button").click(function () {
+        $(window).scrollTo(0, 500);
+    })
+
+
+//    滚动监听
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $('#toolbar').show(100);
+            } else {
+                $('#toolbar').hide(500);
+            }
+        }
     })
 </script>
 </body>

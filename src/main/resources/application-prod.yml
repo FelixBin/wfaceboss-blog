@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog_prod?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  # 数据库操作
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  #日志
+  logging:
+    level:
+      root: warn
+      top.wfaceboss: info
+    file: log/blog-prod.log

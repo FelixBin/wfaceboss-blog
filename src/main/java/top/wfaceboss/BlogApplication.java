@@ -1,4 +1,4 @@
-package top.wfaceboss.blog;
+package top.wfaceboss;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

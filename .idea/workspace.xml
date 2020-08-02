@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02e4f3f0-7368-4ac2-a5df-f11dd8054767" name="Default Changelist" comment="多环境配置 日志输出配置">
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/wfaceboss/web/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wfaceboss/NotFoundExcepiton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/top/wfaceboss/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/wfaceboss/blog/BlogApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wfaceboss/BlogApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wfaceboss/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wfaceboss/web/controller/IndexController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -65,6 +67,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
@@ -72,14 +77,33 @@
       <recent name="top.wfaceboss" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="admin-server" />
+  <component name="RunManager" selected="Spring Boot.BlogApplication (1)">
+    <configuration name="BlogApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.wfaceboss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="top.wfaceboss.BlogApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="admin-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.wfaceboss.BlogApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BlogApplication (1)" />
+      <item itemvalue="Spring Boot.BlogApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -95,6 +119,8 @@
       <workItem from="1595949147163" duration="1401000" />
       <workItem from="1596122716714" duration="1745000" />
       <workItem from="1596124639001" duration="3911000" />
+      <workItem from="1596376499890" duration="17000" />
+      <workItem from="1596376588271" duration="4856000" />
     </task>
     <task id="LOCAL-00001" summary="多环境配置 日志输出配置">
       <created>1596127793597</created>
@@ -119,16 +145,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="多环境配置 日志输出配置" />
     <option name="LAST_COMMIT_MESSAGE" value="多环境配置 日志输出配置" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="231" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596208997338">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1596376695166">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="459" y="231" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1596208997338" />
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1596376695166" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596376951609">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596376951609" />
+    <state x="459" y="231" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596376994367">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="459" y="231" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1596376994367" />
     <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1596127747222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -137,38 +172,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595950819155" />
-    <state width="1323" height="269" key="GridCell.Tab.0.bottom" timestamp="1596209137475">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596209137475" />
-    <state width="1323" height="269" key="GridCell.Tab.0.center" timestamp="1596209137475">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596209137475" />
-    <state width="1323" height="269" key="GridCell.Tab.0.left" timestamp="1596209137475">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1596380806468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596209137475" />
-    <state width="1323" height="269" key="GridCell.Tab.0.right" timestamp="1596209137475">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596380806468" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596209137475" />
-    <state width="1323" height="269" key="GridCell.Tab.1.bottom" timestamp="1596209137476">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1596380806470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596209137476" />
-    <state width="1323" height="269" key="GridCell.Tab.1.center" timestamp="1596209137476">
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596380806470" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596209137476" />
-    <state width="1323" height="269" key="GridCell.Tab.1.left" timestamp="1596209137476">
+    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596209137476" />
-    <state width="1323" height="269" key="GridCell.Tab.1.right" timestamp="1596209137476">
+    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1596380806469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="269" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596209137476" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596380806469" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1596376657915">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596376657915" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1596127801106">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
